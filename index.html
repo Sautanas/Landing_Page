@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Armando Mariscos — Restaurante</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: system-ui, -apple-system, Arial, sans-serif; color: #222; line-height: 1.6; }
+    header { background: #5fc2d3; color: #000000; text-align: center; padding: 60px 20px; }
+    header h1 { font-size: 2.4rem; margin-bottom: 10px; }
+    header p { font-size: 1.2rem; opacity: .9; }
+    section { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+    h2 { color: #1a3a2a; margin-bottom: 20px; font-size: 1.6rem; }
+    .plato { display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid #ddd; }
+    .plato strong { display: block; }
+    .plato span { color: #666; font-size: .95rem; }
+    .precio { font-weight: bold; color: #1a3a2a; white-space: nowrap; }
+    .info p { margin-bottom: 8px; }
+    .whatsapp { display: block; text-align: center; background: #25D366; color: #fff; font-size: 1.2rem; font-weight: bold; text-decoration: none; padding: 16px 24px; border-radius: 12px; margin: 30px auto; max-width: 420px; }
+    .whatsapp:hover { background: #1eb856; }
+    form label { display: block; font-weight: bold; margin: 12px 0 4px; }
+    form input, form textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font: inherit; }
+    form button { display: block; margin-top: 20px; padding: 14px 28px; border: none; border-radius: 12px; background: #1a3a2a; color: #fff; font-size: 1.1rem; font-weight: bold; cursor: pointer; }
+    form button:hover { opacity: .9; }
+    footer { background: #f4f4f4; text-align: center; padding: 24px 20px; color: #666; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Armando Mariscos</h1>
+    <p>Arma el tuyo como quieras.</p>
+  </header>
+
+  <section>
+    <h2>Menú</h2>
+    <div class="plato">
+      <div><strong>Molcajete Chipilon</strong><span>Camarón cocido, ceviche de camarón y callo.</span></div>
+      <div class="precio">$380</div>
+    </div>
+    <div class="plato">
+      <div><strong>Orden de quesadillas (3 pzas.)</strong><span>Puede elegir entre camarón, pulpo y marlín.</span></div>
+      <div class="precio">$250</div>
+    </div>
+    <div class="plato">
+      <div><strong>Chacalosa</strong><span>Ceviche de camarón, tostada de camarón con aguachile.</span></div>
+      <div class="precio">$385</div>
+    </div>
+    <div class="plato">
+      <div><strong>Bichi</strong><span>Caldo de camarón y manta.</span></div>
+      <div class="precio">$60</div>
+    </div>
+  </section>
+
+  <section class="info">
+    <h2>Horario y ubicación</h2>
+    <p><strong>Horario:</strong> lunes a domingo, 10:30 a 18:30.</p>
+    <p><strong>Ubicación:</strong> Blvd. Camino del Seri 374, Montecarlo, 83287 Hermosillo, Son.</p>
+    <p><strong>Teléfono:</strong> (662) 538-8303</p>
+    <!-- Número de WhatsApp tomado del teléfono publicado: 52 + 662 538 8303.
+         Si ese número no tiene WhatsApp, cambia el enlace por el número real. -->
+    <a class="whatsapp" href="https://wa.me/526625388303" target="_blank" rel="noopener">💬 Pedir por WhatsApp</a>
+  </section>
+
+  <section>
+    <h2>Contacto</h2>
+    <form name="contacto" method="POST" data-netlify="true">
+      <label for="nombre">Nombre</label>
+      <input id="nombre" name="nombre" type="text" required>
+      <label for="telefono">Teléfono</label>
+      <input id="telefono" name="telefono" type="tel">
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+      <button type="submit">Enviar mensaje</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Armando Mariscos — Síguenos en redes.</p>
+  </footer>
+</body>
+</html>
